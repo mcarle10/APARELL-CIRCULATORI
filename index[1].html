@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de l'aparell circulatori</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>❤️ Simulador de l'aparell circulatori</h1>
+    <p>Descobreix com circula la sang pel nostre cos</p>
+  </div>
+  <button id="startBtn" class="primary">▶ Inicia el recorregut</button>
+</header>
+
+<main>
+  <section class="intro card">
+    <h2>🩸 Com funciona?</h2>
+    <p>La sang fa un recorregut continu entre el <b>cor, els pulmons i tot el cos</b>.
+       Fes clic sobre les parts del circuit i observa què passa.</p>
+  </section>
+
+  <section class="simulator card">
+    <div class="legend">
+      <span><i class="dot red"></i> Sang rica en oxigen</span>
+      <span><i class="dot blue"></i> Sang pobra en oxigen</span>
+    </div>
+
+    <div class="circuit">
+      <div class="organ lungs" data-info="pulmons">
+        <div class="emoji">🫁</div>
+        <strong>PULMONS</strong>
+        <small>La sang agafa oxigen</small>
+      </div>
+
+      <div class="heart" id="heart" data-info="cor">
+        <div class="heart-shape">♥</div>
+        <strong>COR</strong>
+        <small>Bomba la sang</small>
+      </div>
+
+      <div class="organ body" data-info="cos">
+        <div class="emoji">🧍</div>
+        <strong>COS</strong>
+        <small>Les cèl·lules reben oxigen</small>
+      </div>
+
+      <div class="vessel artery" data-info="arteries">ARTÈRIES</div>
+      <div class="vessel vein" data-info="veins">VENES</div>
+
+      <div class="blood redBlood" id="bloodRed">●</div>
+      <div class="blood blueBlood" id="bloodBlue">●</div>
+
+      <div class="arrow a1">→</div>
+      <div class="arrow a2">↓</div>
+      <div class="arrow a3">←</div>
+      <div class="arrow a4">↑</div>
+    </div>
+
+    <div class="status" id="status">
+      <b>Preparat!</b> Prem «Inicia el recorregut» per veure la sang en moviment.
+    </div>
+  </section>
+
+  <section class="info-grid">
+    <article class="card info" data-info="cor">
+      <span>❤️</span><h3>El cor</h3>
+      <p>És un múscul que es contrau i es relaxa per impulsar la sang per tot el cos.</p>
+    </article>
+    <article class="card info" data-info="arteries">
+      <span>🔴</span><h3>Les artèries</h3>
+      <p>Porten la sang des del cor cap als diferents òrgans i teixits.</p>
+    </article>
+    <article class="card info" data-info="veins">
+      <span>🔵</span><h3>Les venes</h3>
+      <p>Retornen la sang des dels òrgans fins al cor.</p>
+    </article>
+    <article class="card info" data-info="pulmons">
+      <span>🫁</span><h3>Els pulmons</h3>
+      <p>La sang deixa diòxid de carboni i incorpora oxigen.</p>
+    </article>
+    <article class="card info" data-info="capillaries">
+      <span>🩸</span><h3>Els capil·lars</h3>
+      <p>Són vasos molt petits on es produeix l'intercanvi de substàncies amb les cèl·lules.</p>
+    </article>
+  </section>
+
+  <section class="quiz card">
+    <h2>🧠 Repte final</h2>
+    <div id="quiz"></div>
+    <button id="checkBtn" class="primary">Comprova les respostes</button>
+    <div id="score"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Simulador educatiu · Aparell circulatori · 5è de primària</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
