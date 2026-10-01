@@ -1,0 +1,30 @@
+*{box-sizing:border-box}
+:root{--red:#e74c3c;--blue:#2878d4;--dark:#243447;--light:#f4f7fb;--card:#fff}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--light);color:var(--dark)}
+header{background:linear-gradient(135deg,#d62828,#ef6a5b);color:#fff;padding:22px 6%;display:flex;justify-content:space-between;align-items:center;gap:20px}
+h1{margin:0 0 5px;font-size:clamp(24px,4vw,38px)} header p{margin:0;font-size:17px}
+main{max-width:1100px;margin:auto;padding:24px}
+.card{background:var(--card);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 5px 18px #00000012}
+.primary{border:0;background:#fff;color:#c0392b;font-weight:700;padding:13px 20px;border-radius:12px;cursor:pointer;font-size:16px}
+header .primary{background:#fff}.primary:hover{transform:translateY(-1px)}
+.legend{display:flex;gap:25px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}
+.dot{display:inline-block;width:13px;height:13px;border-radius:50%;margin-right:6px}.red{background:var(--red)}.blue{background:var(--blue)}
+.circuit{height:470px;position:relative;max-width:850px;margin:auto;overflow:hidden}
+.organ,.heart{position:absolute;text-align:center;z-index:3;cursor:pointer;transition:.2s}
+.organ:hover,.heart:hover,.info:hover{transform:scale(1.03)}
+.lungs{left:8%;top:26%;width:170px}.body{right:6%;top:25%;width:170px}
+.emoji{font-size:76px}.organ strong,.heart strong{display:block;font-size:19px}.organ small,.heart small{display:block;margin-top:4px}
+.heart{left:42%;top:28%;width:150px}.heart-shape{font-size:115px;color:#d62828;line-height:1;animation:beat 1s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.vessel{position:absolute;padding:9px 13px;border-radius:20px;color:#fff;font-weight:bold;z-index:2}
+.artery{background:var(--red);left:31%;top:12%}.vein{background:var(--blue);left:34%;bottom:13%}
+.arrow{position:absolute;font-size:46px;font-weight:bold;z-index:1}.a1{left:29%;top:27%;color:var(--red)}.a2{left:47%;top:61%;color:var(--red)}.a3{right:27%;top:64%;color:var(--blue)}.a4{left:45%;top:12%;color:var(--blue)}
+.blood{position:absolute;font-size:34px;z-index:4;opacity:0;transition:opacity .2s}
+.redBlood{color:var(--red)}.blueBlood{color:var(--blue)}
+.status{background:#f0f4f8;border-radius:12px;padding:15px;text-align:center;margin-top:5px}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+.info{margin:0;cursor:pointer;transition:.2s}.info span{font-size:35px}.info h3{margin:8px 0}.info p{font-size:14px;line-height:1.45}
+.quiz h2{margin-top:0}.question{padding:14px 0;border-bottom:1px solid #e4e8ed}.question p{font-weight:bold}.question label{display:block;margin:9px 0;cursor:pointer}
+#score{margin-top:16px;font-size:20px;font-weight:bold}
+footer{text-align:center;padding:25px;color:#657383}
+@media(max-width:700px){header{flex-direction:column;align-items:flex-start}.circuit{height:520px}.lungs{left:2%;top:17%;width:135px}.body{right:2%;top:17%;width:135px}.heart{left:35%;top:45%;}.artery{left:29%;top:10%}.vein{left:31%;bottom:9%}.a1{left:24%;top:32%}.a2{left:48%;top:66%}.a3{right:22%;top:70%}.a4{left:45%;top:22%}}
